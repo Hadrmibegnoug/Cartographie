@@ -1,0 +1,25 @@
+
+
+#search{
+    position: relative;
+    width: 100%;
+}
+
+
+#map {
+    z-index: 3;
+    position: relative;
+    margin-top: 2%;
+    left: 10%;
+    width: 80%;
+    height: 500px;
+    touch-action: pan-x pan-y;
+}
+.check{
+    margin: 15px;
+}
+.popup {
+    font-size: 1.1rem;
+}
+
+/* position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;
