@@ -13,12 +13,10 @@ use App\Http\Controllers\DataMigrantController;
 |
 */
 
-Route::get('/reporting', function () {
-    return view('reporting');
-})->name('reporting');
 
 
 Route::controller(DataMigrantController::class)->group(function(){
     Route::get('/', 'accueil')->name('accueil');
     Route::get('/regions', 'index')->name('regions');
+    Route::get('/reporting', 'information')->name('reporting');
 });

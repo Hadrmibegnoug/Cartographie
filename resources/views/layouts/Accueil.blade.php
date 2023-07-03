@@ -21,8 +21,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/crm.png" rel="icon">
+  <link href="assets/img/crm.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,10 +62,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Accueil</a></li>
+          <li><a href="{{route('accueil')}}">Accueil</a></li>
           <li><a href="#about">Cartographie</a></li>
-          <li><a href="#menu">Acteurs intevenants</a></li>
-          <li><a href="{{route('reporting')}}">Reporting</a></li>
+          <li><a href="#menu">Acteurs intervenants</a></li>
+          <li><a href="{{route('reporting')}}">Informations</a></li>
           <li><a href="#chefs">PSH</a></li>
 
         </ul>

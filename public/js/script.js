@@ -1,14 +1,12 @@
 // Créer la carte et définir la vue
 const map = L.map('map');
-map.setView([regions[0].longitude, regions[0].latitude], 7);
+map.setView([regions[0].longitude, regions[0].latitude], 6);
 
 // Ajouter la couche de tuiles OpenStreetMap à la carte
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {
   foo: 'bar',
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-
 
 
 // Données pour les centres d'accueil
@@ -199,7 +197,10 @@ function showCompetenceMarkers() {
         // Créer un marqueur avec les coordonnées de la région correspondante et l'icône de compétence
         if (regionCoords) {
           let marker = L.marker(regionCoords, {
-            title: 'Compétences',
+            title: `
+            Compétence: ${competenceName}
+            Plus d'infos cliquez ici...
+            `,
             icon: competenceIcons[competenceName],
           }).bindPopup(
             `Compétence: ${competenceName}<br>Région: ${region}<br>Nombre de migrants: ${count}`
@@ -304,7 +305,11 @@ document.getElementById('checkbox-competence').addEventListener('change', showCo
 
         // Créer un marqueur avec les coordonnées de la région correspondante et l'icône de sexe
         let marker = L.marker(regionCoords, {
-          title: "Sexe",
+          title: `
+          Région: ${regionId}
+          Femmes migrantes: ${femmes}
+          Hommes migrants: ${hommes}
+          `,
           icon: sexeIcon,
         }).bindPopup(`Région: ${regionId}<br>Femmes migrantes: ${femmes}<br>Hommes migrants: ${hommes}<br>Total des migrants: ${total}`);
 
